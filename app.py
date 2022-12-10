@@ -27,7 +27,7 @@ def inserir_contato(dados_contato):
     agenda.update({chave_contato: dados_contato})
 
 # Crie uma função que mostre o menu de opções da agenda
-def menu():
+def mostrar_menu():
     print('Opções da Agenda: ')    
     print('1 - Inserir contato')
     print('2 - Listar contato(s)')
@@ -35,7 +35,30 @@ def menu():
 
 # Crie uma função que mostre todos os contatos
 def mostrar_contato(agenda):
-    for contato in agenda:
-        print(contato)   
+    print(agenda)  
+
+mostrar_menu()
+ler_opcao = input('Digite uma opção: ')      
+opcao = int(ler_opcao)
+print()
+
+while(opcao != 3):
+    if opcao == 1:
+        print('Inserir contato:')
+        dados_contato = ler_dados_contato()
+        inserir_contato(dados_contato)
+        print()
+    if opcao == 2:
+        print('Listar contato(s):')
+        mostrar_contato(agenda)  
+        print()
+    if opcao == 3:
+        print('Fim do programa!')
+        print()
+
+    mostrar_menu()
+    ler_opcao = input('Digite uma opção: ')      
+    opcao = int(ler_opcao)
+    print()         
 
 
