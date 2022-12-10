@@ -20,4 +20,10 @@ def ler_dados_contato():
     dados_contato = (nome, email, telefone)
     return dados_contato
 
+# Crie uma função que insira os dados de um novo contato na agenda de contatos
+def inserir_contato(dados_contato):
+    chave_contato = gerar_id_contado(lista_ids)
+    # agenda[chave_contato] = dados_contato    
+    agenda.update({chave_contato: dados_contato})
+
 
