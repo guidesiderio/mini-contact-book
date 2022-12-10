@@ -26,4 +26,11 @@ def inserir_contato(dados_contato):
     # agenda[chave_contato] = dados_contato    
     agenda.update({chave_contato: dados_contato})
 
+# Crie uma função que função que mostre o menu de opções da agenda
+def menu():
+    print('Opções da Agenda: ')    
+    print('1 - Inserir contato')
+    print('2 - Listar contato(s)')
+    print('3 - Sair')
+
 
